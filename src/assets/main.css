@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-x: hidden;
+}
+
+.mask {
+  position: relative;
+}
+
+.mask::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); /* This is the semi-transparent black background */
+}
+
+.mask > * {
+  position: relative; /* This ensures the text and other content appear above the darkened background */
+}
+
+.mask-round::before {
+  @apply rounded-xl;
+}
+
+@layer base {
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/public/fonts/RobotoCondensed-Regular.ttf) format('ttf');
+  }
+}
