@@ -17,7 +17,7 @@ export default {
   },
   setup() {
     const swiperOptions = ref({
-      slidesPerView: 5, // Dynamic number of slides per view
+      slidesPerView: 'auto', // Dynamic number of slides per view
       spaceBetween: 10, // No gaps between slides
       navigation: true,
       pagination: { clickable: true }

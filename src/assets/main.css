@@ -4,6 +4,8 @@
 
 body {
   overflow-x: hidden;
+  @apply font-roboto;
+  @apply text-t-gray;
 }
 
 .mask {
